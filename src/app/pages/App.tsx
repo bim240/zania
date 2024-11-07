@@ -2,7 +2,7 @@ import React from 'react'
 import {useGetHomeData} from '../services'
 import Loader from './components/loader'
 import {HomeResponse} from '../utils/types/home'
-import Card from './components/card'
+import CardWrapper from './components/card-wrapper'
 import classes from './styles.module.css'
 
 function App() {
@@ -20,13 +20,11 @@ function App() {
 
   return (
     <div className={classes.container}>
-      {isLoading
-        ? Array.from(Array(5).keys()).map(item => <Loader key={item} />)
-        : cardData?.map((data: HomeResponse) => (
-            <div key={data.title}>
-              <Card details={data} />
-            </div>
-          ))}
+      {isLoading ? (
+        Array.from(Array(5).keys()).map(item => <Loader key={item} />)
+      ) : (
+        <CardWrapper cardData={cardData} />
+      )}
     </div>
   )
 }
