@@ -19,11 +19,11 @@ function App() {
   }, [data?.length])
 
   return (
-    <div className={classes.container}>
+    <div className={isLoading ? classes.container : ''}>
       {isLoading ? (
         Array.from(Array(5).keys()).map(item => <Loader key={item} />)
       ) : (
-        <CardWrapper cardData={cardData} />
+        <CardWrapper cardData={cardData} setCardData={setCardData} />
       )}
     </div>
   )
