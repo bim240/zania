@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Zania Frontend Only Assignment
+
+## [Live Link](https://silver-vacherin-67ff61.netlify.app/)
+
+# About this Assignment
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -6,7 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
+### `yarn start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,12 +18,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
+### `yarn run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -27,20 +26,53 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for
+more information.
 
-### `npm run eject`
+## Project Requirement
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Load in the frontend a static JSON file - Done
+- Display the content as 5 cards, 3 in the first row and 2 in the second row. - Done
+- Display a placeholder spinner for each image that is loading. - Done
+- Make the application so the cards can be reordered via drag and drop. - Done
+- Make so clicking on a card displays the image as an overlay in the middle of the webpage. Make so
+  pressing ESC closes the image. - Done
+- Add a README file to explain how to run it. - Done
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies Used
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Apart from usual once we use in React
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- TypeScript
+- Eslint
+- Husky
+- @tanstack/react-query
+- Axios
+- React-dnd
+- React-simple-image-viewer
 
-## Learn More
+## Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- src
+  - app
+    - configs
+      - axios - Contains axios instance and related interceptors
+      - config - Contains all the env variable ready to be exported with all the logic
+      - react-query - Contains query clients.
+    - pages
+      - components - Contains all the component used for home page
+      - app.tsx - Makes home page (as we only had one page). This is where all the component is
+        clubbed together
+      - style.css - css for home page
+    - services - Contains all the api call for home page.
+    - utils
+      - types - Will contains all the current and future type for all the pages
+      - data - the static data for this assignment
+  - index.css
+  - index.tsx
+  - react-app-env.d
+  - reportWebVitals
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ScreenShot
+
+<img width="1428" alt="image" src="https://github.com/user-attachments/assets/06ad808f-fe41-4dc0-bce0-11c6cb7ecf08">
