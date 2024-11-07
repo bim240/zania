@@ -8,16 +8,19 @@ import {ReactQueryDevtools} from '@tanstack/react-query-devtools'
 import {QueryClientProvider} from '@tanstack/react-query'
 import {DndProvider} from 'react-dnd'
 import {HTML5Backend} from 'react-dnd-html5-backend'
+import {BrowserRouter} from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <DndProvider backend={HTML5Backend}>
-        <App />
-      </DndProvider>
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
+    <BrowserRouter>
+      <QueryClientProvider client={queryClient}>
+        <DndProvider backend={HTML5Backend}>
+          <App />
+        </DndProvider>
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
+    </BrowserRouter>
   </React.StrictMode>,
 )
 

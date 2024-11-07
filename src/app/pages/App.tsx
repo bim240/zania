@@ -4,8 +4,19 @@ import Loader from './components/loader'
 import {HomeResponse} from '../utils/types/home'
 import CardWrapper from './components/card-wrapper'
 import classes from './styles.module.css'
+import {Route, Routes} from 'react-router-dom'
 
 function App() {
+  return (
+    <Routes>
+      <Route path="*" element={<HomePage />} />
+    </Routes>
+  )
+}
+
+export default App
+
+const HomePage = () => {
   const {data} = useGetHomeData()
   const [cardData, setCardData] = React.useState<HomeResponse[]>()
   const [isLoading, setLoading] = React.useState<boolean>(true)
@@ -28,5 +39,3 @@ function App() {
     </div>
   )
 }
-
-export default App
