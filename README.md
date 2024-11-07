@@ -1,6 +1,6 @@
 # Zania Frontend Only Assignment
 
-## [Live Link](https://silver-vacherin-67ff61.netlify.app/)
+## [Live Link](https://silver-vacherin.netlify.app/)
 
 # About this Assignment
 
